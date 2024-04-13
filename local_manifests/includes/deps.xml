@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<manifest>
-    <remote name="iusmac_gitlab" fetch="https://gitlab.com/iusmac/" revision="12.1" />
-
-    <project path="prebuilts/clang/host/linux-x86/clang-r445002" name="android_prebuilts_clang_host_linux-x86_clang-r445002" remote="iusmac_gitlab" />
-</manifest>
