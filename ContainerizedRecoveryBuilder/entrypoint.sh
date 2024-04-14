@@ -5,7 +5,7 @@ readonly __JOBS__
 
 function main() {
     # Repo tool requires python3
-    pyenv latest global 3.9
+    pyenv global 3.9
 
     if __confirm__ 'Init OrangeFox repo scripts?'; then
         rm -rf OrangeFoxScripts &&
@@ -42,7 +42,7 @@ function main() {
         export OUT_DIR=out
 
         # OrangeFox requires python2
-        pyenv latest global 2.7
+        pyenv global 2.7
 
         # shellcheck disable=SC1091
         source build/envsetup.sh &&

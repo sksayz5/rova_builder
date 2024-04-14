@@ -65,8 +65,8 @@ RUN apt-get install -y \
             libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
             libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev \
             libffi-dev liblzma-dev
-RUN pyenv latest install 2.7
-RUN pyenv latest install 3.9
+RUN pyenv install 2.7
+RUN pyenv install 3.9
 RUN for shim in $(pyenv shims); do \
         target=/usr/bin/"$(basename "$shim")"; \
         rm -f "$target"; \
