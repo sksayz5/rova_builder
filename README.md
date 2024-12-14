@@ -43,5 +43,6 @@ This script is a simple wrapper around [ContainerizedAndroidBuilder](https://git
 ### Keep it up to date
 Don't forget to get latest builder updates using `Self-update` option in the main menu or:
 ```console
-git pull --recurse-submodules
+git pull --rebase
+git submodule update --remote --recursive
 ```
