@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <include name="local_manifests/includes/remove.xml" />
-    <include name="local_manifests/includes/deps.xml" />
+        <include name="local_manifests/includes/remove.xml" />
+        <include name="local_manifests/includes/deps.xml" />
+        <remote  name="ghub"
+                fetch="https://github.com" />
+        <remote  name="glab"
+                fetch="https://gitlab.com" />
+ 
+ <!-- Device Trees --> 
+ <project path="device/realme/RMX1901" name="shravansayz/device_realme_RMX1901" remote="ghub" revision="15-derp" />
+	
+ <!-- Vendor Trees -->
+ <project path="vendor/realme/RMX1901" name="shravansayz/vendor_realme_RMX1901_15" remote="glab" revision="15" clone-depth="1" />
+	
+ <!-- Kernel Trees-->
+ <project path="kernel/realme/sdm710" name="shravansayz/kernel_realme_sdm710" remote="ghub" revision="15" clone-depth="1" />
 
-    <remote name="crdroid-10" fetch="https://github.com/crdroidandroid" revision="14.0" />
-
-    <project path="kernel/xiaomi/rova" name="android_kernel_xiaomi_rova" remote="crdroid-10" />
-    <project path="device/xiaomi/rova" name="android_device_xiaomi_rova" remote="crdroid-10" />
-    <project path="vendor/xiaomi/rova" name="android_vendor_xiaomi_rova" remote="crdroid-10" />
+ <!-- Proton clang -->
+ <project path="prebuilts/clang/host/linux-x86/clang-proton" name="kdrag0n/proton-clang" remote="ghub" revision="master" clone-depth="1" />
+ 
+ <!-- frameworks_base -->
+ <remove-project name="frameworks_base" />
+ <project path="frameworks/base" name="shravansayz/frameworks_base_derp" remote="ghub" revision="15" clone-depth="1" />
+ 
+ <!-- sign_keys -->
+ <project path="vendor/derp/signing" name="shravansayz/private_keys" remote="ghub" revision="derp" />
 </manifest>
